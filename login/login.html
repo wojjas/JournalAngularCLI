@@ -1,0 +1,24 @@
+<style>
+    .background{
+        background-color:lavenderblush;
+    }
+</style>
+
+<div class="background"
+        ng-controller="LoginController as loginCtrl">
+    <h3>Welcome Back</h3>
+
+    <input class="form-control email-title" placeholder="E-mail" name="email"
+           type="text" style="cursor: auto;"
+            ng-model="loginCtrl.email">
+    <input class="form-control" placeholder="Password" name="password"
+           type="password" value="" style="cursor: auto;"
+           ng-model="loginCtrl.password">
+
+    <button class="btn btn-primary"
+            type="submit"
+            id="sendButton"
+            ng-click="loginCtrl.handleLoginClick()">
+        Login
+    </button>
+</div>

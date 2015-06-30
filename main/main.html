@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="./app.css">
+    <style>
+        .background{
+            background-color: oldlace;
+        }
+    </style>
+</head>
+
+<body>
+<pre ng-show="debugMode">
+    DESCR:
+    Client-part of Journal application.
+</pre>
+
+<main class="container background" ng-controller="MainController as mainCtrl">
+    <div class="row">
+        <h1>Journal</h1>
+    </div>
+
+    <!--<div class="row">-->
+        <!--<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">-->
+            <!--<div ng-include="'./editor/editor.html'"></div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4">
+            <div ng-view></div>
+        </div>
+    </div>
+    <!--<div ng-show="'./list/list.html'"></div>-->
+    <!--<div ng-include="'./list/list.html'"></div>-->
+
+    <div class="row" ng-show="{{false}}">
+        <div  class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4">
+            <div ng-include="'./list/list.html'">
+        </div>
+    </div>
+
+    <!--<div id="eventLogContainer"-->
+         <!--ng-controller="Log">-->
+        <!--<div id="event-log-inner">-->
+            <!--<div class="title-title">-->
+                <!--<span class="log-title-head">Event Log</span> <br>-->
+                <!--<span class="log-title-bottom">the last {{maxNofEntries}} entries</span>-->
+            <!--</div>-->
+            <!--<ul class="log-text">-->
+                <!--<li ng-repeat="logEntry in logEntries">-->
+                    <!--{{logEntry}}-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+
+</main>
+</body>
+</html>

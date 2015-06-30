@@ -1,0 +1,27 @@
+<style>
+    /*.background{*/
+        /*background-color:lavenderblush;*/
+    /*}*/
+</style>
+
+<div class="background" ng-controller="EditorController as editorCtrl">
+        <textarea class="form-control"
+                  autofocus
+                  rows="4"
+                  ng-model="editorCtrl.note">
+        </textarea>
+
+    <div class="form-group">
+        <button class="btn btn-primary"
+                type="submit"
+                id="sendButton"
+                ng-click="editorCtrl.handleSendClick()">
+            Save
+        </button>
+        <button class="btn btn-default"
+                type="button"
+                ng-click="editorCtrl.handleClearClick()">
+            Clear
+        </button>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+body, h1{
+    text-align: center;
+}
+/*#main-container {*/
+    /*text-align: center;*/
+
+    /*width:95%;*/
+    /*max-width: 400px;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+/*}*/
+
+.text-area{
+    width:100%;
+    margin-bottom: 10px;
+}
+.form-control{
+    margin-top:10px;
+}
+.btn{
+    margin-top:10px;
+}
+
+/*#btn-and-status{*/
+    /*clear: both;*/
+/*}*/
+/*.online-status{*/
+    /*margin-right: 15px;*/
+    /*float: left;*/
+    /*font-size: 0.8em;*/
+    /*color: grey;*/
+/*}*/
+/*.label-text{*/
+    /*margin-top: 10px;*/
+    /*float: left;*/
+/*}*/
+/*.connected-icon{*/
+    /*width: 4em;*/
+    /*height: auto;*/
+    /*margin-right: 20px;*/
+/*}*/
+/*#sendButton{*/
+    /*height: 4em;*/
+    /*float:right;*/
+/*}*/
+
+/*#eventLogContainer{*/
+    /*clear:both;*/
+    /*margin-top: 80px;*/
+    /*text-align: center;*/
+    /*height: 100%;*/
+    /*overflow-y: auto;*/
+/*}*/
+/*#event-log-inner{*/
+    /*width:100%;*/
+    /*color: grey;*/
+    /*border: dotted 1px lightgrey;*/
+
+    /*margin-left: auto;*/
+    /*margin-right:auto;*/
+/*}*/
+/*.title-title{*/
+    /*margin-top: 0.3em;*/
+    /*margin-bottom: 0.5em;*/
+/*}*/
+/*.log-title-head{*/
+    /*color: grey;*/
+    /*font-size: 2em;*/
+    /*line-height: 90%;*/
+
+/*}*/
+/*.log-title-bottom{*/
+    /*display: block;*/
+    /*font-size: 0.6em;*/
+/*}*/
+/*.log-text{*/
+    /*font-family: monospace;*/
+    /*list-style-type: none;*/
+    /*text-align: left;*/
+    /*padding-left: 1em;*/
+    /*padding-right: 1em;*/
+    /*word-wrap: break-word;*/
+/*}*/

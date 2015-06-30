@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="journal">
+<head lang="en">
+    <!--<base href="/JournalAngularCLI/">-->
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- Is the below needed? -->
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+</head>
+<body>
+
+<div ng-include="'./main/main.html'"></div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+
+<script src="./login/login.module.js"></script>
+<script src="./login/loginCtrl.js"></script>
+
+<script src="./editor/editor.module.js"></script>
+<script src="./editor/editorCtrl.js"></script>
+
+<script src="./list/list.module.js"></script>
+<script src="./list/listCtrl.js"></script>
+
+<script src="./main/main.module.js"></script>
+<script src="./main/mainCtrl.js"></script>
+
+<script src="./auth/auth.module.js"></script>
+<script src="./auth/currentUser.js"></script>
+
+</body>
+</html>
