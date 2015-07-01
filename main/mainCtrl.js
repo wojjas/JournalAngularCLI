@@ -18,7 +18,7 @@
         ////////////////
 
         function activate() {
-            if(currentUser.isAuthenticated())
+            if(currentUser.profile.isLoggedIn)
             {
                 $location.path('/editor');
             }else{

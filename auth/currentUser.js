@@ -8,16 +8,26 @@
     //currentUser.$inject = ['DEP'];
 
     function currentUser() {
+        var profile = {
+            "username": "",
+            "token": "",
+            get isLoggedIn(){
+                return this.token ? true : false;
+            }
+        }
+
         var service = {
-            isAuthenticated: isAuthenticated
+            profile: profile,
+            setProfile: setProfile
         };
 
         return service;
 
         ////////////////
 
-        function isAuthenticated() {
-            return false;
+        function setProfile(username, token) {
+            profile.username = username;
+            profile.token = token;
         }
     }
 })();
