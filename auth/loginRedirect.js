@@ -14,9 +14,10 @@
     loginRedirect.$inject = ['$q', '$location'];
 
     function loginRedirect($q, $location) {
+        var previousPath = '/login';
         var service = {
             responseError: responseError,
-            response: response
+            redirectAfterLogin: redirectAfterLogin
         };
 
         return service;
@@ -25,10 +26,16 @@
 
         function responseError(response) {
             if(response.status === 401){
+                previousPath = $location.path();
                 $location.path("/login");
             }
 
             return $q.reject(response);
         }
+        function redirectAfterLogin(){
+            $location.path(previousPath);
+            previousPath = '/login';
+        }
+
     }
 })();

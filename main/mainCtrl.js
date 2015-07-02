@@ -5,9 +5,9 @@
         .module('jaMain')
         .controller('MainController', mainCtrl);
 
-    mainCtrl.$inject = ['$location', 'currentUser'];
+    mainCtrl.$inject = ['$location'];
 
-    function mainCtrl($location, currentUser) {
+    function mainCtrl($location) {
         var vm = this;
 
         vm.activate = activate;
@@ -18,12 +18,7 @@
         ////////////////
 
         function activate() {
-            if(currentUser.profile.isLoggedIn)
-            {
-                $location.path('/editor');
-            }else{
-                $location.path('/login');
-            }
+            $location.path('/editor');
         }
     }
 })();

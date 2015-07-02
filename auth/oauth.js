@@ -16,12 +16,12 @@
 
         ////////////////
 
-        function login(username, password, callback) {
+        function login(username, password) {
             var config = {
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded"
                 }
-            }
+            };
             var data = formEncoder.encode({
                 username: username,
                 password: password,
@@ -38,7 +38,6 @@
             return $http.post(url + "/users/login", data, config).success(function (response) {
                 console.log('Server response: ', response);
                 currentUser.setProfile(username, response.token);
-                callback();
             }).error(function (err) {
                 console.log('Error: ', err);
             });
