@@ -5,9 +5,9 @@
         .module('jaAuth')
         .factory('oauth', oauth);
 
-    oauth.$inject = ['$http', 'formEncoder', 'currentUser'];
+    oauth.$inject = ['$http', 'formEncoder', 'currentUser', 'CONFIG'];
 
-    function oauth($http, formEncoder, currentUser) {
+    function oauth($http, formEncoder, currentUser, CONFIG) {
         var service = {
             login: login
         };
@@ -28,14 +28,7 @@
                 grant_type: "password"
             });
 
-            //TODO: put to common configuration:
-            //https://localhost:5001/users/login
-            //https://localhost:5001/users
-            //https://localhost:5001/notes
-            //https://localhost:5001/ping
-            var url = 'https://localhost:5001';
-
-            return $http.post(url + "/users/login", data, config).success(function (response) {
+            return $http.post(CONFIG.apiUrl + "/users/login", data, config).success(function (response) {
                 console.log('Server response: ', response);
                 currentUser.setProfile(username, response.token);
             }).error(function (err) {

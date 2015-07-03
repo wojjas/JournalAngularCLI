@@ -2,15 +2,69 @@
     /*.debug{*/
         /*background-color: #888888;*/
     /*}*/
+    #event-log-inner{
+        width:100%;
+        color: grey;
+        border: dotted 1px lightgrey;
+        padding: 1em;
+
+        margin-left: auto;
+        margin-right:auto;
+    }
+    .title-title{
+        margin-top: 0.3em;
+        margin-bottom: 0.5em;
+    }
+    .log-title-head{
+        color: grey;
+        font-size: 2em;
+        line-height: 90%;
+
+    }
+    .log-refresh-btn{
+        vertical-align: top;
+    }
+    .log-title-bottom{
+        display: block;
+        font-size: 0.6em;
+    }
+    .log-text{
+        font-family: monospace;
+        list-style-type: none;
+        text-align: left;
+        word-wrap: break-word;
+    }
 </style>
 
 <div class="debug" ng-controller="ListController as listCtrl">
-    <header>
-        <p>Number of notes: <strong>{{listCtrl.numberOfNotes}}</strong></p>
-    </header>
-    <button class="btn btn-default"
-            type="button"
-            ng-click="listCtrl.refreshList()">
-        Refresh
-    </button>
+
+    <!--<button class="btn btn-default"-->
+            <!--type="button"-->
+            <!--ng-click="listCtrl.refreshList()">-->
+        <!--Refresh-->
+    <!--</button>-->
+
+    <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+        <div id="event-log-inner">
+            <div class="title-title">
+                <div class="row log-title-head">
+                    Event Log
+                     <button class="btn-xs btn-default log-refresh-btn"
+                             type="button"
+                             ng-click="listCtrl.refreshList()">
+                         <i class="fa fa-refresh"></i>
+                     </button>
+                </div>
+                <div class="row log-title-bottom">
+                    the last {{listCtrl.maxNumberOfNotes}} entries
+                </div>
+            </div>
+            <ld class="log-text" ng-repeat="note in listCtrl.notes">
+                <dt>{{note.timeStamp | date : 'dd MMM yyyy, HH:mm'}}</dt>
+                <dd>{{note.note}}</dd>
+            </ld>
+        </div>
+    </div>
+    </div>
 </div>

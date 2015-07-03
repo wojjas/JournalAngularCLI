@@ -38,6 +38,14 @@
             //$locationProvider.html5Mode(true);
         }]);
 
+    app.constant('CONFIG', {
+        //'Possible Api routes:
+        //'https://localhost:5001/users/login';
+        //'https://localhost:5001/users';
+        //'https://localhost:5001/notes';
+        "apiUrl": 'https://localhost:5001'
+    });
+
     // Handle routing errors and success events
     //app.run(['$route', function ($route) {
     //    // Include $route to kick start the router.
