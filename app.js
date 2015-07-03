@@ -10,7 +10,7 @@
 
         // Angular modules
         //'ngAnimate',
-        'ngRoute',
+        'ngRoute'
         //'ngSanitize',
 
         // Custom modules
@@ -43,7 +43,8 @@
         //'https://localhost:5001/users/login';
         //'https://localhost:5001/users';
         //'https://localhost:5001/notes';
-        "apiUrl": 'https://localhost:5001'
+        "apiUrl": "https://localhost:5001",
+        "maxNumberOfNotes": "10"
     });
 
     // Handle routing errors and success events
