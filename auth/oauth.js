@@ -28,11 +28,12 @@
                 grant_type: "password"
             });
 
-            return $http.post(CONFIG.apiUrl + "/users/login", data, config).success(function (response) {
-                console.log('Server response: ', response);
-                currentUser.setProfile(username, response.token);
-            }).error(function (err) {
-                console.log('Error: ', err);
+            return $http.post(CONFIG.apiUrl + "/users/login", data, config)
+                .success(function (response) {
+                    console.log('Server response: ', response);
+                    currentUser.setProfile(username, response.token);})
+                .error(function (err) {
+                    console.log('Error: ', err);
             });
         }
     }

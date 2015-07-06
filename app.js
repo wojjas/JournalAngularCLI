@@ -7,6 +7,7 @@
         'jaLogin',
         'jaEditor',
         'jaList',
+        'jaComm',
 
         // Angular modules
         //'ngAnimate',
