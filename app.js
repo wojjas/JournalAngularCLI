@@ -45,7 +45,7 @@
         //'https://localhost:5001/users';
         //'https://localhost:5001/notes';
         "apiUrl": "https://localhost:5001",
-        "maxNumberOfNotes": "10"
+        "maxNumberOfNotes": "8"
     });
 
     // Handle routing errors and success events
