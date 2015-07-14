@@ -36,7 +36,7 @@
                     controllerAs: 'loginCtrl'
                 });
 
-            //$locationProvider.html5Mode(true);
+            $locationProvider.html5Mode(true);
         }]);
 
     app.constant('CONFIG', {

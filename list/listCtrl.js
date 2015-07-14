@@ -11,7 +11,6 @@
         var vm = this;
 
         vm.maxNumberOfNotes = CONFIG.maxNumberOfNotes;
-        vm.numberOfNotes = 0;
         vm.notes = [];
         vm.refreshList = refreshList;
         vm.activate = activate;
@@ -28,10 +27,8 @@
                 .then(function(response){
                     console.log('Notes: ', response);
                     var notes = response.data.documents;
-                    vm.numberOfNotes = notes.length;
-                    //TODO: sort in inversed chronological order, based on timeStamp,
-                    // and remove all but CONFIG.maxNumberOfNotes. So that "the last 10 notes" are shown.
 
+                    //Sort in reversed chronological order, based on timeStamp, show only maxNumberOfNotes:
                     notes.sort(function (a, b) {
                         var dateA = new Date(a.timeStamp);
                         var dateB = new Date(b.timeStamp);
