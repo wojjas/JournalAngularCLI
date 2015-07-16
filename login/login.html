@@ -4,8 +4,7 @@
     }
 </style>
 
-<div class="background"
-        ng-controller="LoginController as loginCtrl">
+<div class="background">
     <h3>Welcome Back</h3>
 
     <input class="form-control email-title" placeholder="E-mail" name="email"
@@ -15,7 +14,7 @@
            type="password" value="" style="cursor: auto;"
            ng-model="loginCtrl.password">
 
-    <button class="btn btn-primary"
+    <button class="btn btn-primary top-margin"
             type="submit"
             id="sendButton"
             ng-click="loginCtrl.handleLoginClick()">

@@ -26,7 +26,9 @@
 
         function responseError(response) {
             if(response.status === 401){
-                previousPath = $location.path();
+                if($location.path() != '/login'){
+                    previousPath = $location.path();
+                }
                 $location.path("/login");
             }
 

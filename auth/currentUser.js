@@ -9,12 +9,12 @@
 
     function currentUser(localStorage) {
         var USERKEY = 'utoken';
-
         var profile = init();
 
         var service = {
             profile: profile,
-            setProfile: setProfile
+            setProfile: setProfile,
+            signOut: signOut
         };
 
         return service;
@@ -40,9 +40,15 @@
         }
 
         function setProfile(username, token) {
-            profile.username = username;
-            profile.token = token;
+            this.profile.username = username;
+            this.profile.token = token;
             localStorage.add(USERKEY, profile);
+        }
+
+        function signOut(){
+            localStorage.remove(USERKEY);
+            this.profile.username = '';
+            this.profile.token = '';
         }
     }
 })();
